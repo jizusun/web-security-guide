@@ -1,0 +1,9 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+
+div.shell {
+    width: 1000px;
+}

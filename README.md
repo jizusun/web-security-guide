@@ -1,4 +1,5 @@
 # The Hitchhiker's Guide to Web Security
+{:.no_toc}
 
 ## Table of Content
 {:.no_toc}
