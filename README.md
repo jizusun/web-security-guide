@@ -15,6 +15,29 @@ To understand the most common threats to web application security and what you c
 
 ### Cross-Site-Scripting (XSS)
 
+#### XSS - Information
+
+- How XSS works? As a result, XSS can hijack the session id
+    - DOM-based XSS: no server involved
+    - Manipulated Network request: client -> server -> client
+    - URL params / input
+- Solution
+    - Output encoding as string, rather than JavaScript code
+    - Input Validation
+    - Secure Libraries
+
+#### XSS - UI5 Control Protection
+
+- Nearly all UI5 standard controls automatically do proper escaping. Application developers do not have to care about output encoding in these UI5 standard controls
+- Exceptions to the rule: No escaping is done for SAP UI5 controls that allow embedding and rendering HTML:
+    - `<sap.ui.richtexteditor.RichTextEditor>`
+    - `<sap.ui.core.HTML>`
+
+- <https://mathiasbynens.be/notes/javascript-escapes>
+- <https://mothereff.in/js-escapes>
+- <https://github.com/mathiasbynens/jsesc>
+- [MDN: encodeURIComponent()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
+
 ### Click-Jacking
 
 ### URL Handling
@@ -23,7 +46,7 @@ To understand the most common threats to web application security and what you c
 
 ### Client Storage
 
-### Cross-Site-Request-Forgery (XSRF)
+### Cross-Site-Request-Forgery (CSRF)
 
 ### Cross-Origin-Request-Sharing (CORS)
 
