@@ -11,6 +11,10 @@
 
 To understand the most common threats to web application security and what you can do to reduce the risk of your site being hacked.
 
+## Lynda.com - Programming Foudations: Web Security
+
+- [Notes](./lynda-web-security).
+
 ## UI5 / Fiori Frontend Security
 
 ### Cross-Site-Scripting (XSS)
