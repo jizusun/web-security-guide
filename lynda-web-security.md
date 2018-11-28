@@ -4,6 +4,8 @@ title: "Lynda.com: Programming Foundations: Web Security"
 categories: drafts
 ---
 
+Course link: <https://www.lynda.com/Web-Development-tutorials/Foundations-Programming-Web-Security/133330-2.html>
+
 
 ## Table of Content
 {:.no_toc}
