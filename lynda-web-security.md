@@ -80,10 +80,38 @@ Security policy
 - Rules or guidelines
 - Keep it simple, clear, and easy to follow
 - Involve all stakeholders
+- Review periodically - security concerns change
 
 ## 2. General Security Principles
 
 ### Least privilege
+
+- > We assume that because they're friendly, they wouldn't do us harm
+- > "Every program and every privileged user of the system should operate using the least amount of privilege necessary to complete the job. - Jerome Saltzer, Communications of the ACM"
+- <https://en.wikipedia.org/wiki/Principle_of_least_privilege>
+- Code should be limited in what it exposes and what it accesses.
+
+```php
+class User {
+    public $valid_users = array('tom', 'mary', 'steve');
+    public $password = 'secretpassword'
+
+    public function authenticate($user, $pwd) {
+        return in_array($user, $valid_users) && password_matches($pwd);
+    }
+
+    public function password_matches($pwd) {
+        return $password == $pwd;
+    }
+}
+```
+
+Least Privilege Benefits
+- Code stability
+    - Controlled data access
+    - Easier to test actions and interactions
+- System security
+    - Vulnerabilities are limited and localized
 
 ### Simple is more secure
 
