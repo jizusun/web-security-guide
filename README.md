@@ -11,9 +11,13 @@
 
 To understand the most common threats to web application security and what you can do to reduce the risk of your site being hacked.
 
+## Recent news
+- [2018-11-26 Malicious code found in npm package event-stream downloaded 8 million times in the past 2.5 months](https://snyk.io/blog/malicious-code-found-in-npm-package-event-stream)
+
+
 ## Lynda.com - Programming Foudations: Web Security
 
-- [Notes](./lynda-web-security).
+- [Course Detailed Notes](./lynda-web-security).
 
 ## UI5 / Fiori Frontend Security
 

@@ -115,11 +115,54 @@ Least Privilege Benefits
 
 ### Simple is more secure
 
+- Complexity invites bugs
+- Use clearly named functions and variables
+- Write code comments
+- Break up long section of code into small functions
+- Don't repeat yourself
+- Legacy code is a security concern
+- Built-in functions are often better than your own version
+- Disable or remove unused feature when possible
+
 ### Never trust users
 
+- Well-meaning users can cause problems
+- Be paranoid: You have to adopt the mindset that everyone is out to get you. 
+- Don't even trust admin users completely
+    - Can become unhappy employees or ex-employees
+    - May not take security seriously
+    - Can have identity stolen
+- Use caution with contractors
+    - Both insider and outsider status
+    - Often not fully vetted
+    - Often transient
+    - Make it easy to revoke their access
+- Even offline
+    - Phone: the famous hacker Kevin Mitnick recounts that much of his computer hacking was done by calling up people on the telephone and convincing them that he was trustworthy
+    - Email
+    - Printing
+
 ### Expect the unexpected
+- Security is not reactive: your job is to figure out how that will happen ahead of time
+- Prevent the crime before it happens
+- "What are all the things a user could try on this page?
+- Consider "edge cases"
+- Get creative
+- Example: Global search box
+    - Length: too little or too much
+    - Content-type: high-ASCII, multi-byte
+    - Content: \"'(){}@#%@^%^#^&
+    - Formats: safe for use in all formats
+    - Structure and inputs: can they be modifed
 
 ### Defense in depth
+- is like having an extra (backup) parachute for yourself.
+- Layered defenses
+- Redundant security
+- Dimensions
+    - People 
+    - Technology
+    - Operations
 
 ### Security through obscurity
 
