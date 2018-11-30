@@ -4,8 +4,27 @@ title: "Lynda.com: Programming Foundations: Web Security"
 categories: drafts
 ---
 
-Course link: <https://www.lynda.com/Web-Development-tutorials/Foundations-Programming-Web-Security/133330-2.html>
+* Author:  [Kevin Skoglund](https://www.lynda.com/Kevin-Skoglund/104-1.html)
+* Released: 2/19/2014 
+* Duration: 3h 33m
+* Skill Level: Beginner
+* Course URL: <https://www.lynda.com/Web-Development-tutorials/Foundations-Programming-Web-Security/133330-2.html>
+* Course Description
+```
+Learn about the most important security concerns when developing websites, and what you can do to keep your servers, software, and data safe from harm. Instructor Kevin Skoglund explains what motivates hackers and their most common methods of attacks, and then details the techniques and mindset needed to craft solutions for these web security challenges. Learn the eight fundamental principles that underlie all security efforts, the importance of filtering input and controlling output, and smart strategies for encryption and user authentication. Kevin also covers special considerations when it comes to credit cards, regular expressions, source code managers, and databases.
 
+This course is great for developers who want to secure their client's websites, and for anyone else who wants to learn more about web security.
+Topics include:
+Why security matters
+What is a hacker?
+How to write a security policy
+Cross-site scripting (XSS)
+Cross-site request forgery (CSRF)
+SQL injection
+Session hijacking and fixation
+Passwords and encryption
+Secure credit card payments
+```
 
 ## Table of Content
 {:.no_toc}
@@ -165,6 +184,11 @@ Least Privilege Benefits
     - Operations
 
 ### Security through obscurity
+- More information benefits hackers: e.g. `Apache 2.2` or URL includes a file ending that gives away the language or the technology that you're using
+- Limit exposed information
+- Limit feedback: on a login page, if a username and password don't match, don't say which one of the two failed.
+- 
+
 
 ### Blacklisting and whitelisting
 
