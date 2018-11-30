@@ -11,21 +11,20 @@ categories: drafts
 * Course URL: <https://www.lynda.com/Web-Development-tutorials/Foundations-Programming-Web-Security/133330-2.html>
 * Course Description
 
-```
-Learn about the most important security concerns when developing websites, and what you can do to keep your servers, software, and data safe from harm. Instructor Kevin Skoglund explains what motivates hackers and their most common methods of attacks, and then details the techniques and mindset needed to craft solutions for these web security challenges. Learn the eight fundamental principles that underlie all security efforts, the importance of filtering input and controlling output, and smart strategies for encryption and user authentication. Kevin also covers special considerations when it comes to credit cards, regular expressions, source code managers, and databases.
+> Learn about the most important security concerns when developing websites, and what you can do to keep your servers, software, and data safe from harm. Instructor Kevin Skoglund explains what motivates hackers and their most common methods of attacks, and then details the techniques and mindset needed to craft solutions for these web security challenges. Learn the eight fundamental principles that underlie all security efforts, the importance of filtering input and controlling output, and smart strategies for encryption and user authentication. Kevin also covers special considerations when it comes to credit cards, regular expressions, source code managers, and databases.
 
-This course is great for developers who want to secure their client's websites, and for anyone else who wants to learn more about web security.
-Topics include:
-Why security matters
-What is a hacker?
-How to write a security policy
-Cross-site scripting (XSS)
-Cross-site request forgery (CSRF)
-SQL injection
-Session hijacking and fixation
-Passwords and encryption
-Secure credit card payments
-```
+> This course is great for developers who want to secure their client's websites, and for anyone else who wants to learn more about web security.
+
+> Topics include:
+> - Why security matters
+> - What is a hacker?
+> - How to write a security policy
+> - Cross-site scripting (XSS)
+> - Cross-site request forgery (CSRF)
+> - SQL injection
+> - Session hijacking and fixation
+> - Passwords and encryption
+> - Secure credit card payments
 
 ## Table of Content
 {:.no_toc}
