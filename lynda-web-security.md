@@ -10,6 +10,7 @@ categories: drafts
 * Skill Level: Beginner
 * Course URL: <https://www.lynda.com/Web-Development-tutorials/Foundations-Programming-Web-Security/133330-2.html>
 * Course Description
+
 ```
 Learn about the most important security concerns when developing websites, and what you can do to keep your servers, software, and data safe from harm. Instructor Kevin Skoglund explains what motivates hackers and their most common methods of attacks, and then details the techniques and mindset needed to craft solutions for these web security challenges. Learn the eight fundamental principles that underlie all security efforts, the importance of filtering input and controlling output, and smart strategies for encryption and user authentication. Kevin also covers special considerations when it comes to credit cards, regular expressions, source code managers, and databases.
 
@@ -189,7 +190,7 @@ Least Privilege Benefits
 - Limit feedback
     - On a login page, if a username and password don't match, don't say which one of the two failed.
     - On a page that allows you to retrieve a forgotten password, you shouldn't acknowledge whether or not a user name is in the database
-- Obsurity does not mean misdirection
+- Obscurity does not mean misdirection
 
 
 ### Blacklisting and whitelisting
