@@ -186,8 +186,10 @@ Least Privilege Benefits
 ### Security through obscurity
 - More information benefits hackers: e.g. `Apache 2.2` or URL includes a file ending that gives away the language or the technology that you're using
 - Limit exposed information
-- Limit feedback: on a login page, if a username and password don't match, don't say which one of the two failed.
-- 
+- Limit feedback
+    - On a login page, if a username and password don't match, don't say which one of the two failed.
+    - On a page that allows you to retrieve a forgotten password, you shouldn't acknowledge whether or not a user name is in the database
+- Obsurity does not mean misdirection
 
 
 ### Blacklisting and whitelisting
