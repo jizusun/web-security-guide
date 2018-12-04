@@ -238,8 +238,25 @@ Least Privilege Benefits
     - Format
     - Within a set of values
     - Uniqueness (for example: user name, blog title)
+- Whitelisting vs. blacklisting
+- Double-check validation logic
 
 ### Sanitizing data
+- Is the data potential dangerous? (stored in SQL database/used in JavaScript)
+- Neutralize, render harmless
+- Use type casting vs. Type juggling
+- Sanitize SQL, HTML, JavaScript, JSON, XML, etc
+    - Encode Characters: Replacing powerful characters with harmless equivelents
+        - HTML: `<` with `&lt;`
+    - Escaping Characters: Add escape characters before powerful characters
+        - SQL: `WHERE name='fake\' AND 1=1--'`
+    - Do not write custom sanitization methods
+        - Use well-tested, language-specific functions
+    - Do not remove or correct invalid data
+- Consider where the data will go
+- Consider where the data might go later
+- Sanitize early, sanitize late, sanitize often
+-     
 
 ### Labeling variables
 
