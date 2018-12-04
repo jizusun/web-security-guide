@@ -193,14 +193,51 @@ Least Privilege Benefits
 
 
 ### Blacklisting and whitelisting
+- Blacklisting: "No access" list
+- Whitelisting: Reference list for what is permitted (more secured approach)
+- Example
+    - html tags: whitelist or blacklist
 
 ### Map exposure points and data passageways
+- Incoming Exposure Points
+    - URLs
+    - Forms
+    - Cookies/Sessions
+    - Database reads
+    - Your public APIs
+- Outgoing Exposure Points
+    - HTML
+    - JavaScript/JSON/XML/RSS
+    - Cookies/Sessions
+    - Database writes
+    - Third-party APIs
+- Understand site topography
 
 ## 3. Filtering Input, Controlling Output
 
 ### Regulating requests
+- *Scenario*: attachment upload
+- `GET` requests: URLs, links
+- `POST` requests: forms
+- `CONNECT`, `DELETE`, `HEAD`, `OPTIONS`, `PUT`, `TRACE`
+- Regulate Request/Response Format
+    - Request `Content-Type` is format of the sent data
+    - Request `Accept` is format for the returned data
+    - HTML, JSON, XML, Text
+    - Any MIME type (RSS, PDF, image, audio, video)
 
 ### Validating input
+- Is the input acceptable?
+- Determine data expectations
+- Prevent bugs, as well as hacks
+- Consider application and database requirements
+- Only allow expected data in submission
+- Common Validations
+    - Presence / Length
+    - Type
+    - Format
+    - Within a set of values
+    - Uniqueness (for example: user name, blog title)
 
 ### Sanitizing data
 
