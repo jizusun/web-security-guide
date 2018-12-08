@@ -255,8 +255,7 @@ Least Privilege Benefits
     - Do not remove or correct invalid data
 - Consider where the data will go
 - Consider where the data might go later
-- Sanitize early, sanitize late, sanitize often
--     
+- Sanitize early, sanitize late, sanitize often    
 
 ### Labeling variables
 
