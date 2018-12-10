@@ -253,11 +253,40 @@ Least Privilege Benefits
     - Do not write custom sanitization methods
         - Use well-tested, language-specific functions
     - Do not remove or correct invalid data
+```js
+    // Hacker tries:
+Input = "<script>alert ("Gotcha!");</script>"
+// You remove <script> and </script> tags:
+Input = "alert("Gotcha!")"
+// Hacker tries:
+Input = "<scr<script>ipt>alert ("Gotcha!");</scr</script>ipt>"
+// You remove <script> and </script> tags:
+input  = "<script>alert ("Gotcha!");</script>"
+```
 - Consider where the data will go
 - Consider where the data might go later
 - Sanitize early, sanitize late, sanitize often    
 
 ### Labeling variables
+- Use names to identify condition of data
+- `dirty`, `raw`, `tainted`, `unsafe`
+- `clean`, `filtered`, `sanitized`, `safe`
+```php
+$raw_email = $_POST['email'];
+$safe_email = sanitize($raw_email);
+// More often than not you would just do it as a one step process
+$safe_email = sanitize($_POST['email]);
+```
+```ruby
+dirty = {}
+clean = {}
+dirty["first_name"] = params["user"]["first_name"]
+clean["first_name"] = sanitize(dirty["first_name"])
+
+clean_params = {}
+clean_params["first_name"] = sanitize(params["user"]["first_name"])
+```
+
 
 ### Keeping code private
 
