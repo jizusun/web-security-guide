@@ -289,12 +289,66 @@ clean_params["first_name"] = sanitize(params["user"]["first_name"])
 
 
 ### Keeping code private
+- Public directory
+    - Accessible by the web server
+    - Point of entry to your web site or application
+    - Be smart about code in public pages
+- Library directory
+	- Not accessible by the web server 
+	- Acessible by your code via the file system
+- Web server configuration
+    - Set document root (public directory)
+    - Allow/deny access
+- `.htacess` file (apache)
+    - Authorization, authentication, blocking
 
 ### Keeping credentials private
+- Plain text credential are dangerous
+    - Give them highest level of care
+    - Keep them seperate from code
+    - Keep them out of version control systems (hard to purge from the history)
+    - Have as few copies as necessary
+    - Developers should all have their own seperate databases
+- Do not reuse passwords
+    - Unique for every computer, environment, database
+- Prefer hashed password whenever possbile
+- Public-key cryptography
+    - example: SSH keys
+    - diffrent from using a password: we don't send our password, we don't send our private key
+    - SSH agent, Keychain(one master password)
+    - SSH agent forwarding
 
 ### Keeping error messages vague
+- Turn off detailed error reporting for production server
+- Return generic 404 and 500 error pages
+- Developers can look up errors in log files 
+- Configure web server to use same error pages
+- Should not give any indication of where things went wrong (server level or application level)
 
 ### Smart logging
+- Errors
+- Sensitive actions (such as logging in, exporting files, deleting database records)
+- Possbile attacks
+- Data Worth Logging
+    - Date and time
+    - Source (user and/or IP)
+    - Action
+    - Target
+    - Cookie/session
+    - URL and all parameters (raw request)
+    - Backtrace (error stack)
+- Activity Loggin
+    - Keep an activity History or Audit Trail
+        - Add database table called 'logs'
+        - Write a function to add entries with a timestamp
+        - Call the fuction whenever an admin makes a change
+    - Review logs routinely
+- Don't log sensitive data
+    - Beware POST parameters and database queries
+    - Filter out passwords, keys, and tokens
+- Keep old content
+    - versioning
+    - Paranoid delete
 
 ## 4. The Most Common Attacks
 
