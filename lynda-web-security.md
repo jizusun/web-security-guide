@@ -359,6 +359,23 @@ clean_params["first_name"] = sanitize(params["user"]["first_name"])
 ### SQL injection
 
 ### URL manipulation
+- It's dangerous because it's so easy to execute  
+- Simply editing the URL string to probe the site  
+- Can be used for revealing private information
+- Can be used for performing restricted actions   
+- Examples
+    - `http://yoursite.com?invoice=A-17391`
+    - `http://yoursite.com?authorize?UserID=987655113`
+    - `http://yoursite.com?SESSIONID=AG383DIJ98832`
+    - `http://yoursite.com/product?preview=false`
+    - `http://yoursite.com/images/small/rockymtns.jpg`
+    - `http://yoursite.com/reports/export/sales`
+- Solution
+    - Realize that URLs are exposed and editable
+    - Don't use obscurity for access control
+    - Keep error messages vague
+    - Clarify GET and POST requests
+        - `GET` requests should 
 
 ### Faked requests and forms
 
