@@ -17,6 +17,7 @@ To understand the most common threats to web application security and what you c
 - [2018-11-26 Malicious code found in npm package event-stream downloaded 8 million times in the past 2.5 months](https://snyk.io/blog/malicious-code-found-in-npm-package-event-stream)
 
 ## [Lynda - Security Training and Tutorials (180 courses)](https://www.lynda.com/Security-training-tutorials/2069-0.html)
+
 ## Lynda.com - Programming Foudations: Web Security 
 
 - [Course Detailed Notes](./lynda-web-security).
@@ -62,6 +63,13 @@ To understand the most common threats to web application security and what you c
 ### Cross-Site-Request-Forgery (CSRF)
 
 ### Cross-Origin-Request-Sharing (CORS)
+
+### Cases I've experienced
+
+- Authorization with token in anonymous application
+- Upload limitation on file format
+- Sanitizing/Removing the `<script>` tag
+- Security Vulnerability Scanning report
 
 ## References
 

