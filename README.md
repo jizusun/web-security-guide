@@ -3,11 +3,10 @@
 {:.no_toc}
 
 ## Table of Content
-
 {:.no_toc}
 
 - A markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-  {:toc}
+{:toc}
 
 ## Objective
 
@@ -17,7 +16,8 @@ To understand the most common threats to web application security and what you c
 
 - [2018-11-26 Malicious code found in npm package event-stream downloaded 8 million times in the past 2.5 months](https://snyk.io/blog/malicious-code-found-in-npm-package-event-stream)
 
-## Lynda.com - Programming Foudations: Web Security
+## [Lynda - Security Training and Tutorials (180 courses)](https://www.lynda.com/Security-training-tutorials/2069-0.html)
+## Lynda.com - Programming Foudations: Web Security 
 
 - [Course Detailed Notes](./lynda-web-security).
 
@@ -67,7 +67,7 @@ To understand the most common threats to web application security and what you c
 
 ### General
 
-- [CompTIA PenTest+ (PT0-001): 3 Select Your Attacks](https://www.lynda.com/IT-Infrastructure-tutorials/CompTIA-PenTest-PT0-001-3-Select-Your-Attacks/789017-2.html)
+- [Lynda - CompTIA PenTest+ (PT0-001): 3 Select Your Attacks](https://www.lynda.com/IT-Infrastructure-tutorials/CompTIA-PenTest-PT0-001-3-Select-Your-Attacks/789017-2.html)
 - [O'Reilly: Security for Web Developers](https://www.oreilly.com/library/view/security-for-web/9781491928684/)
 - [Lynda: Programming Foundations: Web Security](https://www.lynda.com/Web-Development-tutorials/Foundations-Programming-Web-Security/133330-2.html)
 - [MDN: Website Security](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security)
