@@ -4,11 +4,13 @@ title: "Lynda.com: Programming Foundations: Web Security"
 categories: drafts
 ---
 
+![image](https://user-images.githubusercontent.com/4011348/50419329-55789700-086b-11e9-92c9-194cf6cfecc8.png)
+
+* Course: [Lynda.com: Programming Foundations: Web Security](https://www.lynda.com/Web-Development-tutorials/Foundations-Programming-Web-Security/133330-2.html)
 * Author:  [Kevin Skoglund](https://www.lynda.com/Kevin-Skoglund/104-1.html)
 * Released: 2/19/2014 
 * Duration: 3h 33m
 * Skill Level: Beginner
-* Course URL: <https://www.lynda.com/Web-Development-tutorials/Foundations-Programming-Web-Security/133330-2.html>
 * Course Description
 
 > Learn about the most important security concerns when developing websites, and what you can do to keep your servers, software, and data safe from harm. Instructor Kevin Skoglund explains what motivates hackers and their most common methods of attacks, and then details the techniques and mindset needed to craft solutions for these web security challenges. Learn the eight fundamental principles that underlie all security efforts, the importance of filtering input and controlling output, and smart strategies for encryption and user authentication. Kevin also covers special considerations when it comes to credit cards, regular expressions, source code managers, and databases.
@@ -25,6 +27,7 @@ categories: drafts
 > - Session hijacking and fixation
 > - Passwords and encryption
 > - Secure credit card payments
+
 
 ## Table of Content
 {:.no_toc}
@@ -354,6 +357,8 @@ clean_params["first_name"] = sanitize(params["user"]["first_name"])
 
 ### Cross-site scripting (XSS)
 
+
+
 ### Cross-site request forgery (CSRF)
 
 ### SQL injection
@@ -609,24 +614,129 @@ eval
 
 ### Handling forgotten passwords
 
-### Multi-factor authentication
+- What proves someone's identity?
+- Privileged information (e.g., ATM card number plus PIN)
+- Security challenge questions
+- Send email with new password
+- Send email with reset token
+- Email a Reset token
+    - Request the user name to reset
+    - Always respond positively 
+
+        > We'll send you an email ... 
+
+        rather than,
+
+        > Sorry your user name is not found ...
+    - Generate a unique token, store in database
+    - Store token generation time, limit time for use
+    - Email a URL that includes token
+    - URL grants access; allows setting password
+
+### Multi-factor authentication (MFA)
+
+- Requires two (or more) factors:
+    - Something only the user knows
+    - Something only the user has: RSA SecurID device, "Authenticator" mobile app
+    - Something only the user is: Biometrics, Fingerprint, voice, retina
+- MFA Web Implementation
+    1. User create an account
+    2. Site logs computer being used: IP address, set cookies, other characteristics 
+    3. Future logins from same device approved: "knows" password, "has" computer
+    4. Future logins from new device require additional factor
+        - Send email to account on file ("knows" password, "has" email account)
+        - Send SMS message to mobile phone ("knows" password, "has" mobile phone)
+        - Call phone on file with recorded message ("knows" password, "has" mobile phone)
+- Pitfalls
+    - Users are not familiar
+    - Reliability
 
 ## 6. Other Areas of Concern
 
 ### Credit card payments
 
+- PCI Compliance
+
 ### Regular expression flaws
+- > Some people, when confronted with a problem, think "I know, I'll use regular expressions." Now they have two problems.
+<https://en.wikiquote.org/wiki/Jamie_Zawinski>
+- It doesn't have to be complicated to be flawed
+- Examples
+    - A string of user input contains only letters and numbers
+    ```js
+    const regexp = /[a-zA-Z0-9]*/
+
+    // * matches zero or more characters
+    // + matches one or more characters 
+
+    // a failure case: empty string
+    ```
+    - Check for data string is in a correct format
+    ```js
+    const regexp = /^\d{4}-\d{2}-\d{2}$/
+
+    // ^ matches start of line
+    // $ matches end of line
+
+    // \A matches start of string
+    // \Z matches end of string
+    
+    // a failure case: 
+    // const str = "2018-12-25
+    hello world"
+    ```
+    - Pull out the first name and the last name from that data
+    ```js
+
+    const regexp = /First: (.+), Last: (.+),/
+
+    // a failure case: "First: Tom, Last: Smith, City: Denver,"
+    
+    // .+ is greedy
+    // .+? is non-greedy
+    ```
 
 ### Conversions and transformations
 
 ### Buffer overflows
 
+- Problems for low-level programming languages
+
 ### Source code managers
+
+- Source code manager: SCM
+- Version Control Systems: VCS
+- Some fundamental principles:
+    - Control Access to Repositories
+        - Public or private
+        - Policy and procedure for removal of distributed code
+        - Open source model: read-only, fork, pull request
+    - Control Content in Repositories 
+        - Do not commit databases, credentials, tokens, hashes
+        - **Delete** does not **purge** data from the history
 
 ### Database security
 
+- Set a root password
+- Connect using a user besides root
+- Least privilege
+- Allow access only from localhost or specific IP address
+- Back up databases regularly (weekly, nightly, hourly)
+
 ### Server security
+
+- Secure or disable root user login
+- Access privileges
+- SSH keys
+- Customize connection port numbers (SSH, FTP, etc...)
+- Firewall: single point of control
+- Keep software up to date
 
 ## Conclusion
 
 ### Goodbye
+
+- > Security is a very deep topic, but my hope is that you now have a core knowledge that you can build on. 
+
+
+![image](https://user-images.githubusercontent.com/4011348/50419541-40503800-086c-11e9-8b6f-f406d7918800.png)
