@@ -271,12 +271,14 @@ input  = "<script>alert ("Gotcha!");</script>"
 - Use names to identify condition of data
 - `dirty`, `raw`, `tainted`, `unsafe`
 - `clean`, `filtered`, `sanitized`, `safe`
+
 ```php
 $raw_email = $_POST['email'];
 $safe_email = sanitize($raw_email);
 // More often than not you would just do it as a one step process
-$safe_email = sanitize($_POST['email]);
+$safe_email = sanitize($_POST['email']);
 ```
+
 ```ruby
 dirty = {}
 clean = {}
@@ -286,8 +288,6 @@ clean["first_name"] = sanitize(dirty["first_name"])
 clean_params = {}
 clean_params["first_name"] = sanitize(params["user"]["first_name"])
 ```
-
-
 ### Keeping code private
 - Public directory
     - Accessible by the web server
@@ -567,16 +567,45 @@ eval
 - Security questions are questionable 
 
 ### Brute-force attacks
+
 - Systematically trying all possible input combinations until the correct solution is found
 - aka "Exhaustive key search"
 - Dictionary attack
 - KeySpace^KeyLength * TimePerAttempt = TimeRequired
+- Solution
+    - Timing and throlling
+    - Slow password hashing algorithms
+    - Logging
+    - Blacklisting
 
 ### Using SSL for login
 
+- SSL: Secure Sockets Layer
+- Encrypts all data exchanged with server
+- Advantages
+    - Prevents snoop
+    - Prevents session hijacking
+    - Performance penalty due to encryption/decryption time
+    - Requires all assets to be secure
+
 ### Protecting cookies
 
+- Use `HttpOnly` cookies
+- Regenerate session identifier periodically, at key points
+- Expire/remove old session files regularly
+- Do not accept session identifiers from GET or POST variables
+- Use SSL
+- Use Secure cookies
+
 ### Regulating access privileges
+
+- Least privileges
+- Be organized
+- Make privileges easy to revoke
+- Restrict access to access privilege administration tools
+- Evaluate organizational needs and workflow
+- Be careful about getting to fine-grained
+- Divide restricted actions into 'privileges areas"
 
 ### Handling forgotten passwords
 
