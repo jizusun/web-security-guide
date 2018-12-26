@@ -357,13 +357,11 @@ clean_params["first_name"] = sanitize(params["user"]["first_name"])
 
 ### Cross-site scripting (XSS)
 
+- [MDN: HTTP Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
 - Awareness of what you're up against make up half the work of becoming secure
 - Hacker can inject JavaScript into a web page
 - Used to trick users into running injected JavaScript code
 - Used to steal cookies
-
-- Example:
-    - <https://output.jsbin.com/jifubujayu?edit=%3Cscript%3Ealert(%27aaa%27)%3C/script%3E>
 
 ### Cross-site request forgery (CSRF)
 
