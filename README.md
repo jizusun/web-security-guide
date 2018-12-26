@@ -32,6 +32,7 @@ To understand the most common threats to web application security and what you c
 
 - [Michael Solomon](https://www.lynda.com/Michael-Solomon/1992762007-1.html): CompTIA PenTest+ 
 - [Mike Chapple](https://www.lynda.com/Mike-Chapple/2405061-1.html): CISM Cert, SSCP Cert, CompTIA CySA+, CISSP, CompTIA Security+
+- [Malcolm Shore](https://www.lynda.com/Malcolm-Shore/2916700-1.html): Penetration Testing, 
 
 ### Programming Foudations: Web Security 
 
@@ -42,12 +43,29 @@ To understand the most common threats to web application security and what you c
 - [Watch this course](https://www.lynda.com/Security-tutorials/CompTIA-Security-SY0-501-Cert-Prep-1-Threats-Attacks-Vulnerabilities/599625-2.html)
 - [Incomplete Course Detailed Notes](./lynda-sy0-501-prep-1).
 
-### Ethical Hacking: Website and Web Application Testing
+### Ethical Hacking: Website and Web Application Testing (Malcolm Shore)
+
+Overview of web security, including Web Socket protocal
 
 - [Watch this course](https://www.lynda.com/Linux-tutorials/Ethical-Hacking-Website-Web-Application-Testing/512727-2.html)
 
+### Penetration Testing Essential Training (Malcolm Shore)
+
+What is Pen test, basic bash scripting, Python, Kali ...
+
+- [Watch this course](https://www.lynda.com/Metasploit-tutorials/Penetration-Testing-Essential-Training/628702-2.html)
+
 ### Node.js: Security
 - [Watch this course](https://www.lynda.com/Node-js-tutorials/Node-js-Security/746317-2.html)
+
+### React: Securing Applications
+- [Watch this course](https://www.lynda.com/React-js-tutorials/React-Securing-Applications/636138-2.html)
+
+### Ethical Hacking with JavaScript
+- [Watch this course](https://www.lynda.com/JavaScript-tutorials/Ethical-Hacking-JavaScript/758646-2.html)
+
+### DevSecOps: Automated Security Testing
+- [Watch this course](https://www.lynda.com/Software-Development-tutorials/Security-Testing/667367-2.html)
 
 ### Security Tips Weekly
 - [Watch this course](https://www.lynda.com/Security-tutorials/Security-Tips-Weekly/756318-2.html)
@@ -77,6 +95,7 @@ To understand the most common threats to web application security and what you c
 
 ## Penetration Tools
 
+- Nmap, Netcat, tcpdump, netstat ...
 - Kali Linux
 - Vega Scanner
 - Burp Suite
@@ -84,16 +103,20 @@ To understand the most common threats to web application security and what you c
 - ...
 
 
-## Certifications
+## Certifications on Security / Cybersecurity
 
 - ISC^2 Certifications <https://www.isc2.org/Certifications>
     - [SSCP, The Systems Security Certified Practitioner](https://www.isc2.org/en/Certifications/SSCP)
 - CompTIA Certifications <https://certification.comptia.org/certifications?level=cybersecurity>
     - CompTIA CySA+
-    - CompTIA CASP
+    - CompTIA CASP+: Advanced Security Practitioner
     - CompTIA PenTest+
 - ISACA Certification <http://www.isaca.org/Certification/Pages/default.aspx>
     - [CISM, Certified Information Security Manager](http://www.isaca.org/Certification/CISM-Certified-Information-Security-Manager/Pages/default.aspx)
+    - [CISA, Certified Information Systems Auditor](http://www.isaca.org/CERTIFICATION/CISA-CERTIFIED-INFORMATION-SYSTEMS-AUDITOR/Pages/default.aspx)
+- Cicso
+    - [CCNA Security](https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna-security.html)
+
 
 ## UI5 / Fiori Frontend Security
 
@@ -140,11 +163,10 @@ To understand the most common threats to web application security and what you c
 
 ## References
 
-### General
+### Books or Web Pages
 
-- [Lynda - CompTIA PenTest+ (PT0-001): 3 Select Your Attacks](https://www.lynda.com/IT-Infrastructure-tutorials/CompTIA-PenTest-PT0-001-3-Select-Your-Attacks/789017-2.html)
+- [Google - Application Security - Learn XSS](https://www.google.de/intl/lt/about/appsecurity/learning/xss/)
 - [O'Reilly: Security for Web Developers](https://www.oreilly.com/library/view/security-for-web/9781491928684/)
-- [Lynda: Programming Foundations: Web Security](https://www.lynda.com/Web-Development-tutorials/Foundations-Programming-Web-Security/133330-2.html)
 - [MDN: Website Security](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security)
 - [Web 安全开发规范手册 V1.0](https://mp.weixin.qq.com/s/KKXs_KkwhJ_TM2bz7KbM2Q)
 
