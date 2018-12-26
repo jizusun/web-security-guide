@@ -15,20 +15,85 @@ To understand the most common threats to web application security and what you c
 ## Recent news
 
 - [2018-11-26 Malicious code found in npm package event-stream downloaded 8 million times in the past 2.5 months](https://snyk.io/blog/malicious-code-found-in-npm-package-event-stream)
+- 2018-12-25 Ant Design Christmas Easter egg
+    - <https://github.com/ant-design/ant-design/issues/13098>
+    - <https://zhuanlan.zhihu.com/p/53262709>
 
-## [Lynda - Security Training and Tutorials (180 courses)](https://www.lynda.com/Security-training-tutorials/2069-0.html)
+## Cases Study
 
-## Lynda.com - Programming Foudations: Web Security 
+- Authorization with token in anonymous application
+- Upload limitation on file format: 
+- Sanitizing/Removing the `<script>` tag: https://sapjira.wdf.sap.corp/browse/KNGMHM02-11871 
+- Security Vulnerability Scanning report
 
-- [Course Detailed Notes](./lynda-web-security).
+## Lynda - Security Training and Tutorials 
 
-## [Lynda.com - Node.js: Security](https://www.lynda.com/Node-js-tutorials/Node-js-Security/746317-2.html)
+[More than 180 courses](https://www.lynda.com/Security-training-tutorials/2069-0.html)
 
-## OWASP
+- [Michael Solomon](https://www.lynda.com/Michael-Solomon/1992762007-1.html): CompTIA PenTest+ 
+- [Mike Chapple](https://www.lynda.com/Mike-Chapple/2405061-1.html): CISM Cert, SSCP Cert, CompTIA CySA+, CISSP, CompTIA Security+
 
-- Top 10
+### Programming Foudations: Web Security 
+
+- [Watch this course](https://www.lynda.com/Web-Development-tutorials/Foundations-Programming-Web-Security/133330-2.html)
+- [Complete Course Detailed Notes](./lynda-web-security).
+
+### CompTIA Security+ (SY0-501) Cert Prep: 1 Threats, Attacks, and Vulnerabilities
+- [Watch this course](https://www.lynda.com/Security-tutorials/CompTIA-Security-SY0-501-Cert-Prep-1-Threats-Attacks-Vulnerabilities/599625-2.html)
+- [Incomplete Course Detailed Notes](./lynda-sy0-501-prep-1).
+
+### Ethical Hacking: Website and Web Application Testing
+
+- [Watch this course](https://www.lynda.com/Linux-tutorials/Ethical-Hacking-Website-Web-Application-Testing/512727-2.html)
+
+### Node.js: Security
+- [Watch this course](https://www.lynda.com/Node-js-tutorials/Node-js-Security/746317-2.html)
+
+### Security Tips Weekly
+- [Watch this course](https://www.lynda.com/Security-tutorials/Security-Tips-Weekly/756318-2.html)
+- Use a password manager
+    - Stores a passwords for a different sites
+    - Fills in passwords on websites
+    - Store secure notes
+    - Generate strong passwords, etc.
+    - Secure all passwords with one master password
+    - LastPass, KeePass, 1Password, etc.
+    - Most can sync passwords between computers (browser extensions) and devices (android/ios app)
+
+## Web Security Guideline
+
+- OWASP(Open Web Application Security Project) Top 10
     - <https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project>
     - <https://github.com/OWASP/Top10>
+
+## Vulnerability Testing Lab
+
+- WebGoat
+    - WebGoat is a deliberately insecure web application (Java)
+    - <https://github.com/WebGoat/WebGoat>
+- DVWA
+    - Damn Vulnerable Web App (DVWA) is a PHP/MySQL web application that is damn vulnerable. 
+    - <http://www.dvwa.co.uk/>
+
+## Penetration Tools
+
+- Kali Linux
+- Vega Scanner
+- Burp Suite
+- ZAP
+- ...
+
+
+## Certifications
+
+- ISC^2 Certifications <https://www.isc2.org/Certifications>
+    - [SSCP, The Systems Security Certified Practitioner](https://www.isc2.org/en/Certifications/SSCP)
+- CompTIA Certifications <https://certification.comptia.org/certifications?level=cybersecurity>
+    - CompTIA CySA+
+    - CompTIA CASP
+    - CompTIA PenTest+
+- ISACA Certification <http://www.isaca.org/Certification/Pages/default.aspx>
+    - [CISM, Certified Information Security Manager](http://www.isaca.org/Certification/CISM-Certified-Information-Security-Manager/Pages/default.aspx)
 
 ## UI5 / Fiori Frontend Security
 
@@ -72,12 +137,6 @@ To understand the most common threats to web application security and what you c
 
 ### Cross-Origin-Request-Sharing (CORS)
 
-### Cases I've experienced
-
-- Authorization with token in anonymous application
-- Upload limitation on file format
-- Sanitizing/Removing the `<script>` tag
-- Security Vulnerability Scanning report
 
 ## References
 
