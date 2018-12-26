@@ -24,6 +24,12 @@ To understand the most common threats to web application security and what you c
 
 ## [Lynda.com - Node.js: Security](https://www.lynda.com/Node-js-tutorials/Node-js-Security/746317-2.html)
 
+## OWASP
+
+- Top 10
+    - <https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project>
+    - <https://github.com/OWASP/Top10>
+
 ## UI5 / Fiori Frontend Security
 
 ### Cross-Site-Scripting (XSS)
@@ -45,7 +51,9 @@ To understand the most common threats to web application security and what you c
 - Exceptions to the rule: No escaping is done for SAP UI5 controls that allow embedding and rendering HTML:
 
   - `<sap.ui.richtexteditor.RichTextEditor>`
-  - `<sap.ui.core.HTML>`
+  - `<sap.ui.core.HTML>` 
+    - <https://sapui5.hana.ondemand.com/#/api/sap.ui.core.HTML/overview>
+    - <https://sapui5.hana.ondemand.com/test-resources/sap/ui/core/HTMLSanitizer.html>
 
 - <https://mathiasbynens.be/notes/javascript-escapes>
 - <https://mothereff.in/js-escapes>
