@@ -83,6 +83,10 @@ What is Pen test, basic bash scripting, Python, Kali ...
 - OWASP(Open Web Application Security Project) Top 10
     - <https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project>
     - <https://github.com/OWASP/Top10>
+- XSS Prevention Checklist
+    - <https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet>
+- Excess XSS
+    - <https://excess-xss.com/>
 
 ## Vulnerability Testing Lab
 
