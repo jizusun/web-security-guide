@@ -761,11 +761,10 @@ eval
 - PCI Compliance
 
 ### Regular expression flaws
-- > Some people, when confronted with a problem, think "I know, I'll use regular expressions." Now they have two problems.
+> Some people, when confronted with a problem, think "I know, I'll use regular expressions." Now they have two problems.
 <https://en.wikiquote.org/wiki/Jamie_Zawinski>
 - It doesn't have to be complicated to be flawed
-- Examples
-    - A string of user input contains only letters and numbers
+- Examples 1: A string of user input contains only letters and numbers
 
     ```js
     const regexp = /[a-zA-Z0-9]*/
@@ -776,7 +775,7 @@ eval
     // a failure case: empty string
     ```
 
-    - Check for data string is in a correct format
+- Example 2: Check for data string is in a correct format
 
     ```js
     const regexp = /^\d{4}-\d{2}-\d{2}$/
