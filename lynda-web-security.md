@@ -64,7 +64,8 @@ categories: drafts
     - **Trophy hunters**: hackers who are out to prove their skills, seeking fame and admiration from their peers.
     - **Script kiddies**: a derogatory term on the internet for hackers that don't actually have any hacking skills themselves,
     instead they do all of their hacks by running scripts. This group is dangerous precisely because they don't really what they're doing.
-    - **Political activists**: 
+    - **Political activists**: and they're unlikely to give up easily. 
+    - **Professional**: they make money from their hacking, and financially motivated, cost the most damage
 
 ### Total security is unachievable
 
