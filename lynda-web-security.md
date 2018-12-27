@@ -267,6 +267,7 @@ Least Privilege Benefits
     - Do not write custom sanitization methods
         - Use well-tested, language-specific functions
     - Do not remove or correct invalid data
+
 ```js
     // Hacker tries:
 Input = "<script>alert ("Gotcha!");</script>"
@@ -277,6 +278,7 @@ Input = "<scr<script>ipt>alert ("Gotcha!");</scr</script>ipt>"
 // You remove <script> and </script> tags:
 input  = "<script>alert ("Gotcha!");</script>"
 ```
+
 - Consider where the data will go
 - Consider where the data might go later
 - Sanitize early, sanitize late, sanitize often    
@@ -374,6 +376,7 @@ clean_params["first_name"] = sanitize(params["user"]["first_name"])
 - Used to trick users into running injected JavaScript code
 - Used to steal cookies, potentially session data which is has been linked with a cookie
 - Examples
+
 ```html
 // HTTP Request
 GET /register.php?email=<script>alert("Gotcha!");</script>
@@ -635,8 +638,9 @@ eval
 - Rainbow tables: pre-computed tables of password hashes for each hashing algorithm 
 - Salting
     - Additional data added to the password before encryption
-    ```js
 - Store salt in Database
+
+    ```js
     - When using user data for salt and user data could change
     - When using random salt
     - Just the salt, not the password
@@ -645,14 +649,18 @@ eval
     - Knowing password requires also knowing the salt string
     - Rainbow tables could be used, but they would be almost impossible large
 - Unique Salt
+
     ```js
     const uniqueSaltedPassword = `Put salt on the ${password} for ${username}`
     ```
+
     - Knowing password requires also knowing the salt string and username
 - Random Salt
+
     ```js
     const uniqueSaltedPassword = `Put salt on the ${password} at ${timestamp}`
     ```
+
 - Store salt in Database
     - When using user data for salt and user data could change
     - When using random salt
@@ -758,6 +766,7 @@ eval
 - It doesn't have to be complicated to be flawed
 - Examples
     - A string of user input contains only letters and numbers
+
     ```js
     const regexp = /[a-zA-Z0-9]*/
 
@@ -766,7 +775,9 @@ eval
 
     // a failure case: empty string
     ```
+
     - Check for data string is in a correct format
+
     ```js
     const regexp = /^\d{4}-\d{2}-\d{2}$/
 
@@ -780,9 +791,10 @@ eval
     // const str = "2018-12-25
     hello world"
     ```
-    - Pull out the first name and the last name from that data
-    ```js
 
+    - Pull out the first name and the last name from that data
+
+    ```js
     const regexp = /First: (.+), Last: (.+),/
 
     // a failure case: "First: Tom, Last: Smith, City: Denver,"
