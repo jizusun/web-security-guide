@@ -55,9 +55,16 @@ categories: drafts
 
 ### Why security matters
 - The low threshold of entry may leave the impression that web development is easy
-- 
 
 ### What is a hacker?
+- **White hat hacker**: notify owners and the community in order to get them fixed 
+- **Black hat hacker**: someone who uses your web server in a way that you did not intend
+    - **Curious users**: e.g. get a peek at the PDF files that only authorized user can get access to 
+    - **Thrill seekers**:  *"I did it for the lulz."* (lulz is slang for laughs) , but they probably won't steal from you
+    - **Trophy hunters**: hackers who are out to prove their skills, seeking fame and admiration from their peers.
+    - **Script kiddies**: a derogatory term on the internet for hackers that don't actually have any hacking skills themselves,
+    instead they do all of their hacks by running scripts. This group is dangerous precisely because they don't really what they're doing.
+    - **Political activists**: 
 
 ### Total security is unachievable
 

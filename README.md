@@ -18,13 +18,24 @@ To understand the most common threats to web application security and what you c
 - 2018-12-25 Ant Design Christmas Easter egg
     - <https://github.com/ant-design/ant-design/issues/13098>
     - <https://zhuanlan.zhihu.com/p/53262709>
+- 2016-07-20 Wooyun.com was shutdown
+    - <http://www.wooyun.org/>
 
-## Cases Study
+## Questions for the audiences
+- Anyone who majored in the **Information Security** when at school?
+- Anyone who have exploited XSS vulnerability?
+- Anyone who have installed Kali Linux?
+- Anyone who have rooted your Android devices, break-jailed your iOS devices?
+- Is there any chances that you can get back your Windows log-in password if you forget them?
+- Any experiences of dealing with security issues/incidents?
 
-- Authorization with token in anonymous application
-- Upload limitation on file format: 
+## Case Study
+
+- Exploit XSS vulnerability to steal cookies
+- Solution proposal for authorization check in anonymous applications
+- Upload limitation in anonymous applications
 - Sanitizing/Removing the `<script>` tag: https://sapjira.wdf.sap.corp/browse/KNGMHM02-11871 
-- Security Vulnerability Scanning report
+- Security Vulnerability auditing reports by third-party auditor
 
 ## Lynda - Security Training and Tutorials 
 
