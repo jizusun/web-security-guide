@@ -437,6 +437,7 @@ https://fun-poll.com/vote?hacker=5674
 - Can be used to add or change database data
 - Can be used to destroy database data
 - Example
+
 ```
 SELECT * from users
 WHERE username = '${username}' AND password = '${password}'
@@ -444,6 +445,7 @@ WHERE username = '${username}' AND password = '${password}'
 username = "jsmith' OR 1=1; -- "
 password = "blank"
 ```
+
 - Solution
     - Give limited privileges to application's database user
     - Sanitize input
@@ -475,6 +477,7 @@ password = "blank"
 and we don't ever actually work with that header information. 
 - But they can also be manufactured, aka, **faked** or **spoofed**
 - Faked Requests
+
 ```
 GET /somepath HTTP/1.1
 Host: somesite.com
@@ -486,6 +489,7 @@ Accept-Encoding:
 Accept-Charset:
 Cookie:
 ```
+
 - Faked Forms
     - Can be used to edit hidden field values
     - Can be used to remove client-side validation
@@ -531,6 +535,7 @@ Cookie:
 
 - A hacker gives you a session ID to use instead 
 - Example
+
 ```
 GET /login HTTP/1.1
 Host: yourbank.com
@@ -538,6 +543,7 @@ Cookie: SESSION_ID=3e3531fa4ba...
 
 http://yourbank.com/login?SESSION_ID=a1b2c3d4e5...
 ```
+
 - Session Fixation Solutions
     - Regenerate session identifier periodically, at key points
     Especially important to regenerate after log in
@@ -546,6 +552,7 @@ http://yourbank.com/login?SESSION_ID=a1b2c3d4e5...
 
 - Remotely run operating system commands on a web server
 - System Execution Keywords
+
 ```
 system
 exec
@@ -563,6 +570,7 @@ eval
 %x
 `
 ```
+
 - Solution
     - Avoid system execution keywords
     - Understand the commands and their syntax completely
