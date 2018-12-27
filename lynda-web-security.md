@@ -121,16 +121,19 @@ Security policy
 - <https://en.wikipedia.org/wiki/Principle_of_least_privilege>
 - Code should be limited in what it exposes and what it accesses.
 
-```php
+```diff
 class User {
-    public $valid_users = array('tom', 'mary', 'steve');
-    public $password = 'secretpassword'
+    - public $valid_users = array('tom', 'mary', 'steve');
+    + private $valid_users = array('tom', 'mary', 'steve');
+    - public $password = 'secretpassword'
+    + private $password = 'secretpassword'
 
     public function authenticate($user, $pwd) {
         return in_array($user, $valid_users) && password_matches($pwd);
     }
 
-    public function password_matches($pwd) {
+    - public function password_matches($pwd) {
+    + private function password_matches($pwd) {
         return $password == $pwd;
     }
 }
